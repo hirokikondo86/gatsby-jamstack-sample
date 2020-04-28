@@ -13,11 +13,10 @@ const Footer = () => (
 const _Footer = styled.footer`
   width: 100%;
   height: 80px;
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
 
   background-color: ${Primary};
 `;

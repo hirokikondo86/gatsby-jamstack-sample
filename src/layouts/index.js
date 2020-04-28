@@ -6,8 +6,7 @@ import Header from '../components/header';
 export default ({ children }) => (
   <Wrapper>
     <Header />
-    <MarginBtm />
-    {children}
+    <main>{children}</main>
     <Footer />
   </Wrapper>
 );
@@ -15,7 +14,6 @@ export default ({ children }) => (
 const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
-`;
-const MarginBtm = styled.div`
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 `;
