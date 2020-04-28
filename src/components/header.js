@@ -5,34 +5,35 @@ import Menu from '../images/Menu.png';
 import { Link } from 'gatsby';
 
 const Header = () => (
-  <$Header>
-    <$Ul>
-      <$Li style={{ color: `${Primary}` }}>
+  <_Header>
+    <_Ul>
+      <_Li style={{ color: `_{Primary}` }}>
         <$Link to="/">Home</$Link>
-      </$Li>
-      <$Li>
+      </_Li>
+      <_Li>
         <img src={Menu} alt="Menubar" />
-      </$Li>
-    </$Ul>
-  </$Header>
+      </_Li>
+    </_Ul>
+  </_Header>
 );
 
-const $Header = styled.header`
+const _Header = styled.header`
   width: 100%;
   height: 50px;
-  position: fixed;
+  position: sticky;
   top: 0;
+  z-index: 100;
 
   box-shadow: 1px 0 1em;
 `;
-const $Ul = styled.ul`
+const _Ul = styled.ul`
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto;
 `;
-const $Li = styled.li`
+const _Li = styled.li`
   margin: 0 1em;
 `;
 const $Link = styled(Link)`
