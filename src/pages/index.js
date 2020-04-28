@@ -3,38 +3,44 @@ import React from 'react';
 import styled from 'styled-components';
 import { Primary } from '../const/color';
 import Icon from '../images/icon/Icon.png';
-import Name from '../images/Name.png';
 import GitHub from '../images/sns/GitHub.png';
 import Instagram from '../images/sns/Instagram.png';
 import Qiita from '../images/sns/Qiita.png';
 import Twitter from '../images/sns/Twitter.png';
 
 export default () => (
-  <Root>
-    <Flex>
-      <IconImg>
-        <img src={Icon} alt="The author is brushing his teeth" />
-      </IconImg>
-      <P>
-        <img src={Name} alt="Author's name and occupation" />
-      </P>
-      <Ul>
+  <_Root>
+    <_Flex>
+      <_Icon>
+        <_Img src={Icon} alt="The author is brushing his teeth" />
+      </_Icon>
+      <_Name>Hiroki Kondo</_Name>
+      <_P>Web Developer</_P>
+      <_Ul>
         <li>
-          <img src={GitHub} alt="GitHub logo" />
+          <a href="https://github.com/hirokikondo86">
+            <_SNS src={GitHub} alt="GitHub logo" />
+          </a>
         </li>
         <li>
-          <img src={Instagram} alt="Instagram logo" />
+          <a href="https://twitter.com/KHiroki86_">
+            <_SNS src={Twitter} alt="Twitter logo" />
+          </a>
         </li>
         <li>
-          <img src={Qiita} alt="Qiita logo" />
+          <a href="https://qiita.com/hirokikondo86">
+            <_SNS src={Qiita} alt="Qiita logo" />
+          </a>
         </li>
         <li>
-          <img src={Twitter} alt="Twitter logo" />
+          <a href="https://www.instagram.com/khiroki_86/?hl=ja">
+            <_SNS src={Instagram} alt="Instagram logo" />
+          </a>
         </li>
-      </Ul>
-    </Flex>
-    <Nav>
-      <Ul>
+      </_Ul>
+    </_Flex>
+    <_Nav>
+      <_Ul>
         <li>
           <$Link to="/about">About</$Link>
         </li>
@@ -44,16 +50,16 @@ export default () => (
         <li>
           <$Link to="/work">Work</$Link>
         </li>
-      </Ul>
-    </Nav>
-  </Root>
+      </_Ul>
+    </_Nav>
+  </_Root>
 );
 
-const Root = styled.div`
+const _Root = styled.div`
   width: 100%;
   height: 100vh;
 `;
-const Flex = styled.div`
+const _Flex = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -64,26 +70,48 @@ const Flex = styled.div`
   left: 50%;
   transform: translate(-50%, -70%);
 `;
-const IconImg = styled.p`
+const _Icon = styled.p`
   margin-bottom: 55px;
 `;
-const P = styled.p`
-  width: 263px;
-  height: 74px;
-  margin-bottom: 32px;
+const _Img = styled.img`
+  @media screen and (max-width: 500px) {
+    width: 150px;
+    height: 150px;
+  }
 `;
-const Ul = styled.ul`
+const _Name = styled.p`
+  font-size: 2em;
+  @media screen and (min-width: 500px) {
+    font-size: 3em;
+  }
+`;
+const _P = styled.p`
+  margin-bottom: 2em;
+  @media screen and (min-width: 500px) {
+    font-size: 1.5em;
+  }
+`;
+const _Ul = styled.ul`
   width: 220px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  @media screen and (min-width: 500px) {
+    width: 330px;
+  }
 `;
-const Nav = styled.nav`
+const _SNS = styled.img`
+  @media screen and (min-width: 500px) {
+    width: 45px;
+    height: 45px;
+  }
+`;
+const _Nav = styled.nav`
   position: absolute;
   bottom: 80px;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
-  padding: 1em 1.5em;
+  padding: 1em 2em;
 
   background-color: #e0e0e0;
   border-radius: 2em;

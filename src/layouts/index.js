@@ -4,15 +4,16 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 
 export default ({ children }) => (
-  <Wrapper>
+  <_Wrapper>
     <Header />
     <main>{children}</main>
     <Footer />
-  </Wrapper>
+  </_Wrapper>
 );
 
-const Wrapper = styled.div`
+const _Wrapper = styled.div`
   width: 100%;
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
