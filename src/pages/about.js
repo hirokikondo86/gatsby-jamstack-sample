@@ -34,7 +34,7 @@ export default () => (
           </tr>
           <tr>
             <_Th>Hobby</_Th>
-            <_Td>Workout・NBA・少年ジャンプ</_Td>
+            <_Td>バスケ・アメフト・筋トレ・少年ジャンプ</_Td>
           </tr>
         </tbody>
       </_Table>

@@ -24,6 +24,7 @@ const _Header = styled.header`
   top: 0;
   z-index: 100;
 
+  background-color: #f2f2f2;
   box-shadow: 1px 0 1em;
 `;
 const _Ul = styled.ul`
