@@ -2,11 +2,11 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { Primary } from '../const/color';
-import Icon from '../images/icon/Icon.png';
-import GitHub from '../images/sns/GitHub.png';
-import Instagram from '../images/sns/Instagram.png';
-import Qiita from '../images/sns/Qiita.png';
-import Twitter from '../images/sns/Twitter.png';
+import Icon from '../images/Icon.png';
+import GitHub from '../images/GitHub.png';
+import Instagram from '../images/Instagram.png';
+import Qiita from '../images/Qiita.png';
+import Twitter from '../images/Twitter.png';
 
 export default () => (
   <_Root>

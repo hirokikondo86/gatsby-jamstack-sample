@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Third } from '../const/color';
-import Icon from '../images/icon/Icon2.png';
+import Icon from '../images/Icon2.png';
 import Layout from '../layouts';
 
 export default () => (
