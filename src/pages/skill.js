@@ -5,68 +5,71 @@ import Layout from '../layouts';
 
 export default () => (
   <Layout>
-    <_H1>Skill</_H1>
-    <_Section>
-      <_H2>Language</_H2>
-      <_Table>
-        <tbody>
-          <tr>
-            <_Th>Front</_Th>
-            <_Td>HTML, CSS, JavaScript, TypeScript</_Td>
-          </tr>
-          <tr>
-            <_Th>Server</_Th>
-            <_Td>Go, C, PHP</_Td>
-          </tr>
-        </tbody>
-      </_Table>
-    </_Section>
-    <_Section>
-      <_H2>FW, Lib, Others</_H2>
-      <_Table>
-        <tbody>
-          <tr>
-            <_Th>Front</_Th>
-            <_Td>React, Redux, GatsbyJS</_Td>
-          </tr>
-          <tr>
-            <_Th>Server</_Th>
-            <_Td>Gin, Lumen, Laravel</_Td>
-          </tr>
-          <tr>
-            <_Th>Infra</_Th>
-            <_Td>AWS, Kubernetes, CircleCI</_Td>
-          </tr>
-          <tr>
-            <_Th>Design</_Th>
-            <_Td>Figma</_Td>
-          </tr>
-          <tr>
-            <_Th>Others</_Th>
-            <_Td>gRPC, GraphQL</_Td>
-          </tr>
-        </tbody>
-      </_Table>
-    </_Section>
-    <_ExSection>
-      <_H2>Ex.</_H2>
-      <ul>
-        <_Li>
-          株式会社CA Tech Kids School
-          <br />
-          2019 - 04 〜 2019 - 10
-        </_Li>
-        <_Li>
-          株式会社コンビーズ
-          <br />
-          2019 - 10 〜 2020 - 04
-        </_Li>
-      </ul>
-    </_ExSection>
+    <_Article>
+      <h1>Skill</h1>
+      <p>主に使用する言語/FW/ライブラリ一覧</p>
+      <_Section>
+        <_H2>Language</_H2>
+        <_Table>
+          <tbody>
+            <tr>
+              <_Th>Front</_Th>
+              <_Td>HTML, CSS, JavaScript, TypeScript</_Td>
+            </tr>
+            <tr>
+              <_Th>Server</_Th>
+              <_Td>Go, C, PHP</_Td>
+            </tr>
+          </tbody>
+        </_Table>
+      </_Section>
+      <_Section>
+        <_H2>FW, Library, Others</_H2>
+        <_Table>
+          <tbody>
+            <tr>
+              <_Th>Front</_Th>
+              <_Td>React, Redux, GatsbyJS</_Td>
+            </tr>
+            <tr>
+              <_Th>Server</_Th>
+              <_Td>Gin, Lumen, Laravel</_Td>
+            </tr>
+            <tr>
+              <_Th>Infra</_Th>
+              <_Td>AWS, Kubernetes, CircleCI</_Td>
+            </tr>
+            <tr>
+              <_Th>Design</_Th>
+              <_Td>Figma</_Td>
+            </tr>
+            <tr>
+              <_Th>Others</_Th>
+              <_Td>gRPC, GraphQL</_Td>
+            </tr>
+          </tbody>
+        </_Table>
+      </_Section>
+      <_ExSection>
+        <_H2>Ex.</_H2>
+        <ul>
+          <_Li>
+            株式会社CA Tech Kids School
+            <br />
+            2019 - 04 〜 2019 - 10
+          </_Li>
+          <_Li>
+            株式会社コンビーズ
+            <br />
+            2019 - 10 〜 2020 - 04
+          </_Li>
+        </ul>
+      </_ExSection>
+    </_Article>
   </Layout>
 );
 
-const _H1 = styled.h1`
+const _Article = styled.article`
   width: 85%;
   @media screen and (min-width: 500px) {
     width: 450px;
@@ -75,7 +78,6 @@ const _H1 = styled.h1`
   margin-top: 1.5em;
 `;
 const _Section = styled.section`
-  width: 85%;
   @media screen and (min-width: 500px) {
     width: 450px;
   }
