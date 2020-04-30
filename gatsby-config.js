@@ -1,8 +1,13 @@
+let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development';
+require('dotenv').config({
+  path: `.env.${activeEnv}`,
+});
+
 module.exports = {
   siteMetadata: {
-    title: 'Portfolio',
-    description: 'This page is theportfolio for Hiroki Kondo',
-    author: 'Hiroki Kondo',
+    title: 'Hiroki Kondo',
+    description: 'This page is the portfolio for Hiroki Kondo',
+    author: '@Hiroki Kondo',
   },
   plugins: [
     {
@@ -10,6 +15,13 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_API_KEY,
       },
     },
     `gatsby-plugin-styled-components`,

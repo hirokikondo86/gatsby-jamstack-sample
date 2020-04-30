@@ -2,3 +2,5 @@
 /.cache
 .DS_Store
 /yarn-error.log
+.env.development
+.env.production
