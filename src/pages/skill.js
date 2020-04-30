@@ -7,7 +7,7 @@ export default () => (
   <Layout>
     <_Article>
       <h1>Skill</h1>
-      <p>主に使用する言語/FW/ライブラリ一覧</p>
+      <p style={{ marginTop: '0.5em' }}>主に使用する言語/FW/ライブラリ一覧</p>
       <_Section>
         <_H2>Language</_H2>
         <_Table>
