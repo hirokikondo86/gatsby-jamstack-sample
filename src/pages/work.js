@@ -1,31 +1,33 @@
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { Primary } from '../const/color';
 import Layout from '../layouts';
 
-export default () => (
-  <Layout>
-    <_Article>
-      <h1>Work</h1>
-      <p>過去に制作した主なプロダクト一覧</p>
-      <_Section>
-        <$Link>
-          <h1>THINK!</h1>
-          <p style={{ marginBottom: '0.25em' }}>
-            リアルタイムにアイデアを共有できるオンラインブレインストーミングツール
-          </p>
-          <p style={{ fontSize: '0.75em' }}># TypeScript, React, Go, gRPC, AWS, CircleCI</p>
-        </$Link>
-      </_Section>
-      <_Section>
-        <h1>Portfolio</h1>
-        <p style={{ marginBottom: '0.25em' }}>Lighthouse満点のポートフォリオ</p>
-        <p style={{ fontSize: '0.75em' }}># TypeScript, React, Go, gRPC, AWS, CircleCI</p>
-      </_Section>
-    </_Article>
-  </Layout>
-);
+export default ({ data }) => {
+  const {
+    allContentfulPost: { edges },
+  } = data;
+  const posts = edges.map((edge) => edge.node);
+
+  return (
+    <Layout>
+      <_Article>
+        <h1>Work</h1>
+        <p style={{ marginTop: '0.5em' }}>過去に開発した主なプロダクト一覧</p>
+        {posts.map((post, i) => (
+          <_Section key={i}>
+            <$Link to={`/work/${post.id}`}>
+              <h1>{post.title}</h1>
+              <p style={{ marginBottom: '0.25em' }}>{post.description}</p>
+              <p style={{ fontSize: '0.75em' }}># {post.technology}</p>
+            </$Link>
+          </_Section>
+        ))}
+      </_Article>
+    </Layout>
+  );
+};
 
 const _Article = styled.article`
   width: 85%;
@@ -47,4 +49,19 @@ const _Section = styled.section`
 const $Link = styled(Link)`
   color: ${Primary};
   text-decoration: none;
+`;
+
+export const query = graphql`
+  query {
+    allContentfulPost {
+      edges {
+        node {
+          id
+          title
+          description
+          technology
+        }
+      }
+    }
+  }
 `;
