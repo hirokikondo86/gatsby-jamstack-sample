@@ -3,13 +3,15 @@ import styled from 'styled-components';
 import Footer from '../components/footer';
 import Header from '../components/header';
 
-export default ({ children }) => (
-  <_Wrapper>
-    <Header />
-    <main>{children}</main>
-    <Footer />
-  </_Wrapper>
-);
+export default ({ children }) => {
+  return (
+    <_Wrapper>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </_Wrapper>
+  );
+};
 
 const _Wrapper = styled.div`
   width: 100%;

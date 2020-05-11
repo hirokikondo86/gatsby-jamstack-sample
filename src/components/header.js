@@ -1,21 +1,34 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { Primary } from '../const/color';
 import Menu from '../images/Menu.png';
-import { Link } from 'gatsby';
+import Modal from './modal';
 
-const Header = () => (
-  <_Header>
-    <_Ul>
-      <_Li style={{ color: `_{Primary}` }}>
-        <$Link to="/">Home</$Link>
-      </_Li>
-      <_Li>
-        <img src={Menu} alt="Menubar" />
-      </_Li>
-    </_Ul>
-  </_Header>
-);
+const Header = (props) => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+  const handleModalOpen = (event) => {
+    setIsModalOpen(true);
+  };
+  const handleModalClose = (event) => {
+    setIsModalOpen(false);
+  };
+
+  return (
+    <_Header>
+      <_Ul>
+        <_Li style={{ color: `${Primary}` }}>
+          <$Link to="/">Home</$Link>
+        </_Li>
+        <_Li onClick={handleModalOpen}>
+          <img style={{ cursor: 'pointer' }} src={Menu} alt="Menubar" />
+        </_Li>
+      </_Ul>
+      <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose} />
+    </_Header>
+  );
+};
 
 const _Header = styled.header`
   width: 100%;
