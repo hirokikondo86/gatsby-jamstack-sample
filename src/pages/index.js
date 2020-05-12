@@ -81,8 +81,9 @@ const _Img = styled.img`
     height: 150px;
   }
 `;
-const _Name = styled.p`
+const _Name = styled.h1`
   font-size: 2em;
+  font-weight: normal;
   @media screen and (min-width: 500px) {
     font-size: 3em;
   }
