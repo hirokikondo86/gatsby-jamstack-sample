@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://hirokikondo.me/work/1123af01-b7a4-5dbc-9461-6366a49ae8ef</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hirokikondo.me/work/1ff24765-1be6-534f-a7ca-16c5c7a55d78</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hirokikondo.me/work/a5720a01-6314-5b06-b173-2337d2a291b7</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hirokikondo.me/work/c69bb839-4833-5e28-9b73-d87966be8c64</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hirokikondo.me/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hirokikondo.me/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hirokikondo.me/skill/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hirokikondo.me/work/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>

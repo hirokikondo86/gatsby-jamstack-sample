@@ -15,9 +15,14 @@
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "contentful": "^7.14.4",
+    "gatsby-plugin-manifest": "^2.4.2",
     "gatsby-plugin-modal-routing": "^1.1.0",
+    "gatsby-plugin-offline": "^3.2.1",
+    "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-sitemap": "^2.4.2",
     "gatsby-plugin-styled-components": "^3.2.4",
     "gatsby-source-contentful": "^2.3.1",
+    "react-helmet": "^6.0.0",
     "react-modal": "^3.11.2",
     "styled-components": "^5.1.0"
   }

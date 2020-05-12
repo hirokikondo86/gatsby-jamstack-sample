@@ -1,15 +1,16 @@
-let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development';
+const config = require('./config/site');
+
+const activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development';
 require('dotenv').config({
   path: `.env.${activeEnv}`,
 });
 
 module.exports = {
   siteMetadata: {
-    title: 'Hiroki Kondo',
-    description: 'This page is the portfolio for Hiroki Kondo',
-    author: '@Hiroki Kondo',
+    ...config,
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,6 +18,21 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        short_name: config.shortName,
+        name: config.title,
+        icon: config.favicon,
+        description: config.description,
+        start_url: config.pathPrefix,
+        display: 'standalone',
+        theme_color: config.themeColor,
+        background_color: config.backgroundColor,
+      },
+    },
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-contentful`,
       options: {

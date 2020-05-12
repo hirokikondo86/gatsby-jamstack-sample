@@ -43,6 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
           //
           // The page "path" is always available as a GraphQL
           // argument.
+          id: edge.node.id,
         },
       });
     });

@@ -5,10 +5,7 @@ import { Primary, Secondary } from '../const/color';
 import Layout from '../layouts';
 
 export default ({ data }) => {
-  const {
-    allContentfulPost: { edges },
-  } = data;
-  const posts = edges.map((edge) => edge.node);
+  const post = data.contentfulPost;
 
   return (
     <Layout>
@@ -16,21 +13,19 @@ export default ({ data }) => {
         <$Link to="/work">← Back</$Link>
       </_Div>
       <_Article>
-        {posts.map((post, i) => (
-          <_Section key={i}>
-            <p style={{ marginBottom: '0.75em' }}>
-              <img src={post.image[0].file.url} alt="Image image of this Product" />
-            </p>
-            <h1>{post.title}</h1>
-            <p style={{ fontSize: '0.75em', marginBottom: '2em' }}># {post.technology}</p>
-            <_Button>
-              {post.demo === '0' ? '' : <_A href={post.demo}>Demo</_A>}
-              {post.github === '0' ? '' : <_A href={post.github}>GitHub</_A>}
-              {post.qiita === '0' ? '' : <_A href={post.qiita}>Qiita</_A>}
-            </_Button>
-            <p>{post.descriptionDetail.descriptionDetail}</p>
-          </_Section>
-        ))}
+        <_Section>
+          <p style={{ marginBottom: '0.75em' }}>
+            <img src={post.image[0].file.url} alt="Image image of this Product" />
+          </p>
+          <h1>{post.title}</h1>
+          <p style={{ fontSize: '0.75em', marginBottom: '2em' }}># {post.technology}</p>
+          <_Button>
+            {post.demo === '0' ? '' : <_A href={post.demo}>Demo</_A>}
+            {post.github === '0' ? '' : <_A href={post.github}>GitHub</_A>}
+            {post.qiita === '0' ? '' : <_A href={post.qiita}>Qiita</_A>}
+          </_Button>
+          <p>{post.descriptionDetail.descriptionDetail}</p>
+        </_Section>
       </_Article>
     </Layout>
   );
@@ -79,27 +74,23 @@ const _A = styled.a`
 `;
 
 export const query = graphql`
-  query {
-    allContentfulPost {
-      edges {
-        node {
-          id
-          title
-          description
-          technology
-          descriptionDetail {
-            descriptionDetail
-          }
-          image {
-            file {
-              url
-            }
-          }
-          demo
-          github
-          qiita
+  query($id: String!) {
+    contentfulPost(id: { eq: $id }) {
+      id
+      title
+      description
+      technology
+      descriptionDetail {
+        descriptionDetail
+      }
+      image {
+        file {
+          url
         }
       }
+      demo
+      github
+      qiita
     }
   }
 `;

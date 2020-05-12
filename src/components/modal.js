@@ -16,7 +16,7 @@ const Modal = (props) => {
       </p>
       <_Ul>
         <_Li>
-          <$Link>Home</$Link>
+          <$Link to="/">Home</$Link>
         </_Li>
         <_Li>
           <$Link to="/about">About</$Link>
