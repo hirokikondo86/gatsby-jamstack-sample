@@ -7,9 +7,11 @@ import GitHub from '../images/GitHub.png';
 import Instagram from '../images/Instagram.png';
 import Qiita from '../images/Qiita.png';
 import Twitter from '../images/Twitter.png';
+import SEO from '../components/SEO';
 
 export default () => (
   <_Root>
+    <SEO />
     <_Flex>
       <_Icon>
         <_Img src={Icon} alt="The author is brushing his teeth" />

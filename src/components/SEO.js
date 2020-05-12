@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
@@ -80,7 +80,8 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
       }
       return (
         <>
-          <Helmet title={seo.title}>
+          <Helmet>
+            <title>{seo.title}</title>
             <html lang={siteLanguage} />
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
