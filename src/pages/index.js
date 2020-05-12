@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { Primary } from '../const/color';
-import Icon from '../images/Icon.png';
+import Icon from '../images/Icon.webp';
 import GitHub from '../images/GitHub.png';
 import Instagram from '../images/Instagram.png';
 import Qiita from '../images/Qiita.png';
