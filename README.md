@@ -1,3 +1,3 @@
-# Portfolio
+# portfolio
 
-LightHouse満点のPortfolio を Gatsby+Contentful+Netlify の JAMStack で実装する。
+LightHouse full score Portfolio with JAMStack(Gatsby+Contentful+Netlify)
