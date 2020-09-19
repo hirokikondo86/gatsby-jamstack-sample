@@ -1,3 +1,3 @@
-# portfolio
+# jamstack-sample
 
-LightHouse full score Portfolio with JAMStack(Gatsby+Contentful+Netlify)
+I developed LightHouse full score Portfolio to test JAMStack(Gatsby+Contentful+Netlify)
